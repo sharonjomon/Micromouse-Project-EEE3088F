@@ -1,0 +1,33 @@
+\documentclass[11pt]{report}
+\input{Style/ChapterStyle.tex}
+\usepackage{standalone} % Best loaded last in the preamble
+
+
+\begin{document}
+
+\pagenumbering{roman}
+\input{FrontMatter/Title.tex}
+\input{FrontMatter/Declaration.tex}
+\glsresetall
+
+\tableofcontents
+
+\newpage
+
+\pagenumbering{arabic}
+
+\input{Chapters/01Introduction.tex}
+\input{Chapters/02RequirementsAnalysis.tex}
+\input{Chapters/03Design.tex}
+\input{Chapters/04AcceptanceTesting.tex}
+\input{Chapters/05Conclusion}
+
+
+% Uncomment the Bibliography if you have any references
+\newpage
+\bibliography{Bibliography/References.bib}
+
+R%\appendix
+%\input{Appendices/Appendix_1.tex}
+
+\end{document}

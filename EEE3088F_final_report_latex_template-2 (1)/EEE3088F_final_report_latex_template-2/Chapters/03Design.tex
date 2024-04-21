@@ -1,0 +1,102 @@
+% ----------------------------------------------------
+% Subsystem Design
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Subsystem Design} \label{ch:design}
+\vspace{-1cm}
+% =====================================================
+\section{Design Decisions}
+
+
+\subsection{Final Design}
+The following design...
+% 1. Provide a description of your solution and motivate why this design was chosen.
+% 2. Provide the final schematic, make sure to include:
+%       - labels and component values
+%       - descriptions/comments on different parts of the schematic
+%       - the completed schematic page setup: title, date, revision number, author name and surname.
+%       - power flags on all power connections (3V, 5V, Gnd, etc)
+% 2. Provide the final PCB, make sure to include:
+%       - front, back and 3D view 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{EEE3088F_latex_template/Figures/signature.jpg}
+    \caption{Schematic}
+    \label{fig:schematic}
+\end{figure}
+
+\begin{figure}[h]
+     \centering
+    % First subfigure
+    \begin{subfigure}[b]{0.3\linewidth}
+        \includegraphics[width=\linewidth]{EEE3088F_latex_template/Figures/signature.jpg}
+        \caption{Front PCB}
+        \label{fig:PCB_front}
+    \end{subfigure}
+    \hfill % Space between the subfigures
+    % Second subfigure
+    \begin{subfigure}[b]{0.3\linewidth}
+        \includegraphics[width=\linewidth]{EEE3088F_latex_template/Figures/signature.jpg}
+        \caption{Back PCB}
+        \label{fig:PCB_back}
+    \end{subfigure}
+    \hfill % Space between the subfigures
+    % Third subfigure
+    \begin{subfigure}[b]{0.3\linewidth}
+        \includegraphics[width=\linewidth]{EEE3088F_latex_template/Figures/signature.jpg}
+        \caption{3D PCB}
+        \label{fig:PCB_3D}
+    \end{subfigure}
+    \caption{PCB}
+    \label{fig:PCB}
+\end{figure}
+% =====================================================
+\section{Failure Management}
+
+\begin{table}[h]
+    \centering
+    \caption{CAPTION} \label{tab:failuremanagement}
+    \begin{tabular}{c|l}
+        \hline
+        \textbf{Name} & \textbf{Description} \\
+        \hline
+          &  \\
+          &  \\
+         &  \\
+         &  \\
+         \hline
+    \end{tabular}
+\end{table}
+
+% =====================================================
+\section{System Integration and Interfacing}
+To integrate the subsystem with the rest of the system ....
+\\
+\begin{table}[h]
+  \begin{center}
+    \caption{Interfacing specifications}
+    \label{tab:Interfacing}
+    \begin{tabular}{ >{\centering\arraybackslash}m{3cm}  m{5cm} m{7cm}}
+      \hline
+      \textbf{Interface} & \textbf{Description} & \textbf{Pins/Output} \\   
+      \hline
+      I001 & SparkFun 9DoF IMU Breakout board to STM for data transfer (SPI) & \tabitem MISO: Breakout MISO* to STM PB14
+      \newline\indent\tabitem MOSI: Breakout MOSI* to STM PB15\newline\indent\tabitem SCLK: Breakout SCLK* to STM PB13\newline\indent\tabitem CS: Breakout CS* to STM PB12 (GPIO)\newline\indent\tabitem Power: Breakout 1V8-5V5* to STM 3V\newline\indent\tabitem GND: Breakout GND* to STM GND\\
+      \hline
+      I002 & STM to FTDI for data transfer to computer (UART) &\tabitem STM PA2(RX) to FTDI RXD \newline\indent\tabitem STM PA3(TX) to FTDI TXD \\
+      \hline 
+      I003 & FTDI to computer for data transfer from STM & \tabitem Assuming the FTDI is connected to a Micro B USB port (which can be used to connect to a USB cable to connect to a computer), output via cable  \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\fi
+\end{document}
+% ----------------------------------------------------

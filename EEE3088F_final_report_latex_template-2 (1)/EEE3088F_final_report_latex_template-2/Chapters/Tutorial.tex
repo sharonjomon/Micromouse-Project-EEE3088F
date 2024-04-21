@@ -1,0 +1,104 @@
+% ----------------------------------------------------
+% Tutorial
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Tutorial}
+% ----------------------------------------------------
+
+
+\section{Section heading} % This is how you make a section heading
+\subsection{Subsection heading} % This is how you make a subsection heading
+\subsubsection{Subsubsection heading}  % This is how you make a subsubsection heading
+
+This is a normal paragraph.
+
+\section{How to: Figures}
+\subsection{Tables}
+\begin{enumerate}
+    \item Let's make our first table:
+        \begin{itemize}
+            \item Click the "Insert Table" tool in the tool bar > Select size of table > Begin editing > Follow \href{https://www.overleaf.com/learn/latex/Tables}{this tutorial} to begin customising the table.
+            \item Alternatively use \href{https://www.tablesgenerator.com}{latex table generator} to create more complicated tables
+        \end{itemize}
+    \item Let's populate the table:
+        \begin{table}
+            \centering
+            \begin{tabular}{|c|cc|}
+                \hline
+                \textbf{See} & \textbf{this is} & \textbf{easy}\\
+                \hline
+                 &  & \\
+                 &  & \\
+                 &  & \\
+                 \hline \hline
+            \end{tabular}
+            \caption{Caption}
+            \label{tab:my_first_table}
+        \end{table}
+    \item Now we can reference \autoref{tab:my_first_table} or Table \ref{tab:my_first_table} from anywhere in our document! Make sure to do this because it makes your document a lot more readable and usable.
+\end{enumerate}
+
+\subsection{Images}
+\begin{enumerate}
+    \item Let's make add our first image:
+        \begin{itemize}
+            \item Click the "Insert Figure" tool in the tool bar > Select how to upload the image > Follow the instructions.
+            \item Alternatively follow \href{https://www.overleaf.com/learn/latex/Inserting_Images}{this tutorial}.
+        \end{itemize}
+    \item Let's take a look at an example:        
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.5\linewidth]{EEE3088F_latex_template/Figures/whalecome.jpeg}
+                \caption{My first image}
+                \label{fig:my_first_image}
+            \end{figure}
+    \item Now we can reference \autoref{fig:my_first_image} or Figure \ref{fig:my_first_image} from anywhere in our document! Make sure to do this because it makes your document a lot more readable and usable.        
+\end{enumerate}
+
+\subsection{Other Figures}
+This will likely be more useful for other courses, but LaTeX and Overleaf allow you to import other types of figures and has other cool features like allowing you to draw diagrams and plot graphs directly in LaTeX. There are plenty of resources available on how to do this, please give it a try when you have the need for it. Trust me, plotting a graph straight in LaTeX using your raw data is less time consuming than having to \textit{\textbf{repeatedly}} take screenshots in Excel. 
+
+\section{How to: Bibliography}
+\begin{enumerate}
+    \item Let's make add our first citation:
+        \begin{itemize}
+            \item To cite sources in LaTeX you need to make use of \textbf{Bibtex}: here is \href{https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX}{a tutorial}. 
+            \item This template is already all set up to allow you to add and use citations. The template is set to the IEEE default (this is the what we will use in this and all other EEE courses). However, you will need to add any and all references you might have to the \textbf{\textit{.bib}} file (as described in the tutorial). 
+                \begin{enumerate}
+                    \item Navigate to the \textit{Bibliography} folder in this template > Open \textit{References.bib} > Use @... to add Bibtex references.
+                    \item \textcolor{red}{\textbf{Use \href{https://bibtex.eu}{this resource} to learn all about Bibtex.}}
+                \end{enumerate}
+            
+        \end{itemize}
+    \item Let's take a look at an example:        
+            \begin{center}
+                This is what an in-text reference looks like in LaTeX: \cite{rick_roll}.
+            \end{center}      
+\end{enumerate}
+
+
+\section{How to: other things}
+\subsection{Cross Referencing}
+This is when you make reference to chapters, sections, figures, etc from within your document. For example: 
+\begin{itemize}
+    \item \autoref{fig:my_first_image} or Figure \ref{fig:my_first_image}.
+    \item \autoref{ch:introduction} or Chapter \ref{ch:introduction}.
+\end{itemize}
+
+
+\subsection{Math Equations}
+Another cool thing about LaTeX is that it nicely formats your mathematical equations. \href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{This tutorial} is super helpful, there are also plenty of other online resources to help you do this.
+
+
+
+
+
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\fi
+\end{document}
+% ----------------------------------------------------

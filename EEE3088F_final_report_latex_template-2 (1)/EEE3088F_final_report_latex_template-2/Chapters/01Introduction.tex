@@ -1,0 +1,31 @@
+% ----------------------------------------------------
+% Introduction
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Introduction} \label{ch:introduction}
+\vspace{-1cm}
+% ----------------------------------------------------
+
+\section{Problem Description}
+
+The micromouse project represents a collaborative effort to design and implement a small robotic mouse capable of autonomously navigating and completing a maze.
+
+It consists of separate systems, namely, a motherboard, processor, power system, and sensor subsystem. Within this project a micro mouse must be constructed from designing the sensing and power subsystems with a team of two. This report will focus on the power subsystem which is important for powering the motors that allow the wheels of the micro mouse to turn. With this it is able to move forward and reverse in the maze as well as it has to charge the battery that is used to power the circuits of the micromouse. 
+
+% =====================================================
+\section{Scope and Limitations}
+The primary objective of this project is to construct a fully functional Micromouse while adhering to the requirements and specification. The power subsystem is a printed circuit board (PCB) that provides power to the motors and facilitating battery charging. It will be integrated with the motherboard by fitting into its pin headers. Furthermore, the size of the power subsystem must be carefully considered to enable the Micromouse to navigate through the maze without hitting the side walls or being unable to turn with the corners.
+
+% =====================================================
+\section{GitHub Link}
+
+% Make sure that the repo is public at the time of this submission.
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\fi
+\end{document}
+% ----------------------------------------------------

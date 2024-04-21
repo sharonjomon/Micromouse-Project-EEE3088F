@@ -1,0 +1,95 @@
+% ----------------------------------------------------
+% Requirements Analysis
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Requirements Analysis} \label{ch:reqAnalysis}
+\vspace{-1cm}
+% ----------------------------------------------------
+
+\section{Requirements}
+The requirements for a micromouse power module are described in \autoref{tab:requirements}.
+\begin{table}[h]
+    \centering
+    \caption{User and functional requirements of the power subsystem.}    \label{tab:requirements}
+    \begin{tabular}{c|l}
+        \hline
+        \textbf{ Requirement ID} & \textbf{Description} \\
+        \hline
+         UR01 & \\
+         FR01 & \\
+         &  \\
+         &  \\
+         \hline
+    \end{tabular}
+\end{table}
+
+% =====================================================
+\section{Specifications}
+The specifications, refined from the requirements in \autoref{tab:requirements}, for the micromouse power module are described in \autoref{tab:specifications}.
+\begin{table}[h]
+    \centering
+    \caption{Specifications of the sensing subsystem derived from the requirements in \autoref{tab:requirements}.}    \label{tab:specifications}
+    \begin{tabular}{c|l}
+        \hline
+        \textbf{Specification ID} & \textbf{Description} \\
+        \hline
+         SP01 & User \\
+         &  \\
+         &  \\
+         \hline
+    \end{tabular}
+\end{table}
+
+% =====================================================
+\section{Testing Procedures}
+A summary of the testing procedures detailed in \autoref{ch:atp} is given in \autoref{tab:atps_summary}.
+\begin{table}[h]
+    \centering
+    \caption{CAPTION}
+    \label{tab:atps_summary}
+    \begin{tabular}{c|l}
+        \hline
+        \textbf{Acceptance Test ID} & \textbf{Description} \\
+        \hline
+         AT01 & User \\
+         &  \\
+         &  \\
+         \hline
+    \end{tabular}
+\end{table}
+
+% =====================================================
+\section{Traceability Analysis}
+The show how the requirements, specifications and testing procedures all link, \autoref{tab:matrix} is provided.
+
+\begin{table}[h]
+    \centering
+    \caption{Requirements Traceability Matrix}
+    \label{tab:matrix}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \# & Requirements & Specifications  & Acceptance Test\\
+        \hline
+         1 & UR01 &  SP01 & AT01 \\
+         2 & FR01 & SP02,SP05 & AT03 \\
+         & &  & \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Traceability Analysis 1}
+UR01 is this from which SP01, blah blah blah, can be derived. To test this AT01 is suggested because blah blah blah.
+
+\subsection{Traceability Analysis 2}
+From FR02, yadda yadda, SP02 and SP05 can be derived because blah blah blah. These can be tested through AT03 which tests yadda yadda yadda.
+
+
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\fi
+\end{document}
+% ----------------------------------------------------
